@@ -9,7 +9,7 @@
 	//function: find max value of a number list
 	function findMax(aNums) {
 		var iMax = aNums[0];
-
+		// chnaged from greater than to less than or equal to
 		for(var i=0; i<aNums.length; i++) {
 			if(iMax <= aNums[i]) {
 				iMax = aNums[i];
@@ -26,6 +26,7 @@
 	var iSize = parseInt(prompt('Class size?'));
 	var aGradesPhysics = [];
 	var aGradesChemistry = [];
+	// gave aGradesBiology = to an empty array
 	var aGradesBiology = [];
 
 	//ParseInt does the same as Number but removes anything other than a number from the value if input
@@ -45,6 +46,7 @@
 	var aAverageGrades = [];
 
 	for(var i=0; i<iSize; i++) {
+		// changed name of aGradesPhysics.length to 3 , this always divides result by the 3 subjects that there is
 		var fAverage = (aGradesPhysics[i] + aGradesChemistry[i] + aGradesBiology[i]) / 3;
 		aAverageGrades.push(fAverage);
 	}
@@ -57,13 +59,13 @@
 		if(aAverageGrades[i] < 50) {
 
 			document.write('Student '+(i+1)+': Fail'+'<br>');
-
+		// final alteration added JavaScript assignment operator '=' to the if statement so that a 50 grade is recognized as a pass
 		} else if(aAverageGrades[i] >= 50 && aAverageGrades[i] < 80) {
 
 			document.write('Student '+(i+1)+': Pass<br>');
 
 		} else {
-
+			// positioned arithmetic operator inside the single quotes
 			document.write('Student '+(i+1)+': Pass with Distinction'+'<br>');
 		}
 	}
